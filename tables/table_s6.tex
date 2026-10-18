@@ -1,0 +1,81 @@
+\begin{table}[ht]
+\centering
+\small
+\caption{Reliability and human validation of technical quality ratings.}
+\label{tab:quality_validation}
+\begin{tabular}{lccc}
+\toprule
+Measure & Organization & Technique & Total quality \\
+\midrule
+
+\rowcolor{lightgray}
+\multicolumn{4}{l}{\textbf{Within-LLM Reliability}} \\
+
+ICC(2,1)
+    & 0.748
+    & 0.828
+    & 0.854 \\
+
+Mean quadratic $\kappa$
+    & 0.746
+    & 0.827
+    & \textemdash \\
+
+All 3 runs exactly agree
+    & 74.5\%
+    & 76\%
+    & 59.5\% \\
+
+All 3 within 1 point
+    & 100\%
+    & 100\%
+    & 94.5\% \\
+
+\addlinespace
+
+\rowcolor{lightgray}
+\multicolumn{4}{l}{\textbf{LLM--Human Validity}} \\
+
+ICC(2,1)
+    & 0.765
+    & 0.768
+    & 0.848 \\
+
+Quadratic $\kappa$
+    & 0.760
+    & 0.763
+    & \textemdash \\
+
+Pearson $r$
+    & 0.761
+    & 0.818
+    & 0.867 \\
+
+Spearman $\rho$
+    & 0.715
+    & 0.822
+    & 0.866 \\
+
+Exact agreement
+    & 82.5\%
+    & 72.5\%
+    & 62.5\% \\
+
+Within 1 point
+    & 100\%
+    & 100\%
+    & 97.5\% \\
+
+MAE
+    & 0.175
+    & 0.275
+    & 0.400 \\
+
+Mean LLM $-$ Human
+    & +0.025
+    & -0.275
+    & -0.250 \\
+
+\bottomrule
+\end{tabular}
+\end{table}

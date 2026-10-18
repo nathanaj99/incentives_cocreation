@@ -1,0 +1,32 @@
+\begin{table}[ht]
+\centering
+\small
+\begin{tabular}{lrr|rr|rr|r}
+\toprule
+Comparison & \multicolumn{2}{c}{\textbf{AI-O -- SELF-O}} & \multicolumn{2}{c}{\textbf{AI-T -- SELF-T}} & \multicolumn{2}{c}{\textbf{AI (T -- O)}} & \textbf{SELF (T -- O)} \\
+\midrule
+Version & Final & First (AI) & Final & First (AI) & Final & First (AI) & Final \\
+\cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7}
+\midrule
+\rowcolor{lightgray}
+\textbf{Embeddings} &  &  &  &  &  &  &  \\
+all-MiniLM-L12 & $0.030^{\star}_{\textcolor{red}{}}$ & $0.157^{\star \star \star}_{\textcolor{red}{\star \star \star}}$ & $0.117^{\star \star \star}_{\textcolor{red}{\star \star \star}}$ & $0.173^{\star \star \star}_{\textcolor{red}{\star \star \star}}$ & $0.082^{\star \star \star}_{\textcolor{red}{\star \star \star}}$ & $0.011^{}_{\textcolor{red}{}}$ & $-0.005^{}_{\textcolor{red}{}}$ \\
+all-mpnet-base & $0.020^{}_{\textcolor{red}{}}$ & $0.131^{\star \star \star}_{\textcolor{red}{\star \star \star}}$ & $0.098^{\star \star \star}_{\textcolor{red}{\star \star \star}}$ & $0.157^{\star \star \star}_{\textcolor{red}{\star \star \star}}$ & $0.072^{\star \star \star}_{\textcolor{red}{\star \star \star}}$ & $0.020^{}_{\textcolor{red}{}}$ & $-0.006^{}_{\textcolor{red}{}}$ \\
+Qwen3-Embedding & $0.034^{\star \star}_{\textcolor{red}{\star}}$ & $0.178^{\star \star \star}_{\textcolor{red}{\star \star \star}}$ & $0.106^{\star \star \star}_{\textcolor{red}{\star \star \star}}$ & $0.172^{\star \star \star}_{\textcolor{red}{\star \star \star}}$ & $0.096^{\star \star \star}_{\textcolor{red}{\star \star \star}}$ & $0.018^{}_{\textcolor{red}{}}$ & $0.024^{}_{\textcolor{red}{}}$ \\
+embeddinggemma & $0.020^{\star}_{\textcolor{red}{}}$ & $0.116^{\star \star \star}_{\textcolor{red}{\star \star \star}}$ & $0.060^{\star \star \star}_{\textcolor{red}{\star \star \star}}$ & $0.123^{\star \star \star}_{\textcolor{red}{\star \star \star}}$ & $0.055^{\star \star \star}_{\textcolor{red}{\star \star \star}}$ & $0.023^{\star \star}_{\textcolor{red}{}}$ & $0.016^{}_{\textcolor{red}{}}$ \\
+Style-Embedding & $0.186^{\star \star \star}_{\textcolor{red}{\star \star \star}}$ & $0.595^{\star \star \star}_{\textcolor{red}{\star \star \star}}$ & $0.202^{\star \star \star}_{\textcolor{red}{\star \star \star}}$ & $0.486^{\star \star \star}_{\textcolor{red}{\star \star \star}}$ & $0.128^{\star \star}_{\textcolor{red}{\star \star}}$ & $0.004^{}_{\textcolor{red}{}}$ & $0.112^{\star \star}_{\textcolor{red}{\star \star}}$ \\
+byt5 & $0.020^{\star \star}_{\textcolor{red}{\star}}$ & $0.032^{\star \star \star}_{\textcolor{red}{\star \star \star}}$ & $0.001^{}_{\textcolor{red}{}}$ & $0.010^{\star \star}_{\textcolor{red}{\star \star}}$ & $0.005^{}_{\textcolor{red}{}}$ & $0.001^{}_{\textcolor{red}{}}$ & $0.024^{\star \star}_{\textcolor{red}{\star \star}}$ \\
+STAR & $0.052^{\star \star \star}_{\textcolor{red}{\star \star \star}}$ & $0.196^{\star \star \star}_{\textcolor{red}{\star \star \star}}$ & $0.072^{\star \star \star}_{\textcolor{red}{\star \star \star}}$ & $0.169^{\star \star \star}_{\textcolor{red}{\star \star \star}}$ & $0.062^{\star \star \star}_{\textcolor{red}{\star \star \star}}$ & $0.015^{}_{\textcolor{red}{}}$ & $0.042^{\star \star \star}_{\textcolor{red}{\star \star}}$ \\
+\midrule
+\rowcolor{lightgray}
+\textbf{Lexical based} &  &  &  &  &  &  &  \\
+Compression ratio & $-0.011^{}_{\textcolor{red}{}}$ & $0.038^{\star \star \star}_{\textcolor{red}{\star \star \star}}$ & $0.012^{}_{\textcolor{red}{}}$ & $0.048^{\star \star \star}_{\textcolor{red}{\star \star \star}}$ & $0.041^{\star \star \star}_{\textcolor{red}{\star \star \star}}$ & $0.028^{\star \star}_{\textcolor{red}{}}$ & $0.019^{\star}_{\textcolor{red}{\star}}$ \\
+BLEU & $0.033^{\star \star \star}_{\textcolor{red}{\star \star \star}}$ & $0.122^{\star \star \star}_{\textcolor{red}{\star \star \star}}$ & $0.052^{\star \star \star}_{\textcolor{red}{\star \star \star}}$ & $0.114^{\star \star \star}_{\textcolor{red}{\star \star \star}}$ & $0.042^{\star \star \star}_{\textcolor{red}{\star \star \star}}$ & $0.015^{\star \star}_{\textcolor{red}{}}$ & $0.023^{\star \star \star}_{\textcolor{red}{\star \star \star}}$ \\
+ROUGE-L & $0.034^{\star \star \star}_{\textcolor{red}{\star \star \star}}$ & $0.137^{\star \star \star}_{\textcolor{red}{\star \star \star}}$ & $0.064^{\star \star \star}_{\textcolor{red}{\star \star \star}}$ & $0.129^{\star \star \star}_{\textcolor{red}{\star \star \star}}$ & $0.047^{\star \star \star}_{\textcolor{red}{\star \star \star}}$ & $0.010^{}_{\textcolor{red}{}}$ & $0.018^{\star \star \star}_{\textcolor{red}{\star \star \star}}$ \\
+NGDS ($n=2$) & $0.010^{}_{\textcolor{red}{}}$ & $-0.037^{\star \star \star}_{\textcolor{red}{\star \star \star}}$ & $-0.003^{}_{\textcolor{red}{}}$ & $-0.038^{\star \star \star}_{\textcolor{red}{\star \star \star}}$ & $-0.028^{\star \star \star}_{\textcolor{red}{\star \star \star}}$ & $-0.015^{\star}_{\textcolor{red}{}}$ & $-0.015^{}_{\textcolor{red}{}}$ \\
+NGDS ($n=3$) & $0.003^{}_{\textcolor{red}{}}$ & $-0.068^{\star \star \star}_{\textcolor{red}{\star \star \star}}$ & $-0.014^{}_{\textcolor{red}{}}$ & $-0.066^{\star \star \star}_{\textcolor{red}{\star \star \star}}$ & $-0.040^{\star \star \star}_{\textcolor{red}{\star \star \star}}$ & $-0.021^{\star \star}_{\textcolor{red}{}}$ & $-0.022^{\star \star}_{\textcolor{red}{\star}}$ \\
+\bottomrule
+\end{tabular}
+\caption{Study 2: effect sizes from differences in mean pairwise similarity over the final submissions (``Final'') and the first valid draft the AI suggested when available (``First (AI)''). Inference uses jackknife variance estimates for the pairwise-similarity U-statistics with a normal approximation and one-sided tests. Black significance stars are standard p-values, while red stars use Benjamini--Hochberg (BH) FDR-adjusted p-values: $^{*}$ $p<0.1$, $^{**}$ $p<0.05$, $^{***}$ $p<0.01$.}
+\label{tab:effects_combined_study2}
+\end{table}

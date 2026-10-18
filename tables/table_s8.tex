@@ -1,0 +1,31 @@
+\begin{table}[ht]
+\centering
+\small
+\begin{tabular}{lrrrrrr}
+\toprule
+ & \multicolumn{3}{c}{\textbf{Study 1}} & \multicolumn{3}{c}{\textbf{Study 2}} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+Metric & $\rho_b\uparrow$ & $R_O\downarrow$ & $R_T\downarrow$ & $\rho_b\uparrow$ & $R_O\downarrow$ & $R_T\downarrow$ \\
+\midrule
+\rowcolor{lightgray}
+\textbf{Embeddings} & & & & & & \\
+all-MiniLM-L12 & $30.0\% \pm 84.6\%$ & $19.6\% \pm 18.3\%$ & $31.6\% \pm 18.7\%$ & $74.2\% \pm 35.1\%$ & $19.3\% \pm 22.7\%$ & $67.8\% \pm 21.2\%$ \\
+all-mpnet-base & $43.0\% \pm 79.3\%$ & $19.2\% \pm 22.3\%$ & $31.7\% \pm 19.3\%$ & $79.4\% \pm 40.0\%$ & $15.4\% \pm 27.0\%$ & $62.3\% \pm 24.5\%$ \\
+Qwen3-Embedding & N/A & $-9.0\% \pm 53.4\%$ & $29.2\% \pm 31.0\%$ & $68.0\% \pm 40.0\%$ & $19.1\% \pm 20.6\%$ & $61.6\% \pm 17.5\%$ \\
+embeddinggemma & $29.3\% \pm 95.6\%$ & $17.2\% \pm 18.3\%$ & $22.4\% \pm 16.8\%$ & $66.2\% \pm 51.4\%$ & $17.5\% \pm 23.1\%$ & $48.8\% \pm 19.0\%$ \\
+Style-Embedding & N/A & $-6.8\% \pm 35.1\%$ & $29.0\% \pm 30.2\%$ & $8.0\% \pm 79.1\%$ & $31.2\% \pm 18.6\%$ & $41.5\% \pm 19.3\%$ \\
+byt5 & N/A & N/A & N/A & N/A & $61.9\% \pm 45.6\%$ & N/A \\
+STAR & $11.3\% \pm 98.8\%$ & $21.3\% \pm 16.8\%$ & $25.4\% \pm 18.6\%$ & $27.7\% \pm 54.7\%$ & $26.5\% \pm 15.6\%$ & $42.5\% \pm 13.7\%$ \\
+\midrule
+\rowcolor{lightgray}
+\textbf{Lexical based} & & & & & & \\
+Compression ratio & $17.5\% \pm 41.8\%$ & $-100.9\% \pm 91.4\%$ & $-159.7\% \pm 162.3\%$ & N/A & $-28.1\% \pm 68.4\%$ & $24.6\% \pm 39.9\%$ \\
+BLEU & N/A & $-4.3\% \pm 8.6\%$ & $2.9\% \pm 9.0\%$ & $37.1\% \pm 30.9\%$ & $27.1\% \pm 10.4\%$ & $46.1\% \pm 13.2\%$ \\
+ROUGE-L & N/A & $23.2\% \pm 49.4\%$ & $-25.1\% \pm 108.3\%$ & $46.9\% \pm 26.5\%$ & $24.7\% \pm 10.4\%$ & $49.3\% \pm 11.7\%$ \\
+NGDS ($n=2$) & $-13.3\% \pm 50.5\%$ & N/A & N/A & N/A & $-27.6\% \pm 68.8\%$ & $8.8\% \pm 51.7\%$ \\
+NGDS ($n=3$) & $-16.2\% \pm 52.7\%$ & N/A & N/A & N/A & $-4.0\% \pm 38.5\%$ & $21.8\% \pm 32.8\%$ \\
+\bottomrule
+\end{tabular}
+\caption{Scale-free measures of AI homogenization. $\rho_b$ denotes the share of the AI homogenization effect under the technical-quality incentive offset by the originality incentive (higher is better). $R_O$ and $R_T$ denote the share of initial AI-draft homogenization retained in final submissions under the originality and technical-quality incentives, respectively (lower is better). Entries report estimates $\pm$ 95\% confidence interval half-widths. N/A indicates that the denominator fails the minimum-magnitude or statistical-precision criterion.}
+\label{tab:homogenization_retention}
+\end{table}

@@ -1,0 +1,41 @@
+\begin{table}[ht]
+\centering
+\small
+\begin{tabular}{lrr}
+\toprule
+Metric &
+\textbf{Study 1} &
+\textbf{Study 2} \\
+\midrule
+\rowcolor{lightgray}
+\textbf{Embeddings} & & \\
+all-MiniLM-L12 & $0.019^{}_{\textcolor{red}{}}$ & $0.087^{\star \star}_{\textcolor{red}{\star}}$ \\
+all-mpnet-base & $0.032^{}_{\textcolor{red}{}}$ & $0.078^{\star \star}_{\textcolor{red}{\star}}$ \\
+Qwen3-Embedding & $0.032^{}_{\textcolor{red}{}}$ & $0.072^{\star \star}_{\textcolor{red}{\star}}$ \\
+embeddinggemma & $0.013^{}_{\textcolor{red}{}}$ & $0.040^{\star}_{\textcolor{red}{}}$ \\
+Style-Embedding & $0.196^{}_{\textcolor{red}{}}$ & $0.016^{}_{\textcolor{red}{}}$ \\
+byt5 & $0.012^{}_{\textcolor{red}{}}$ & $-0.019^{}_{\textcolor{red}{}}$ \\
+STAR & $0.008^{}_{\textcolor{red}{}}$ & $0.020^{}_{\textcolor{red}{}}$ \\
+\midrule
+\rowcolor{lightgray}
+\textbf{Lexical-based} & & \\
+Compression ratio & $-0.018^{}_{\textcolor{red}{}}$ & $0.022^{}_{\textcolor{red}{}}$ \\
+BLEU & $0.002^{}_{\textcolor{red}{}}$ & $0.019^{\star}_{\textcolor{red}{}}$ \\
+ROUGE-L & $0.005^{}_{\textcolor{red}{}}$ & $0.030^{\star \star \star}_{\textcolor{red}{\star}}$ \\
+NGDS ($n=2$) & $-0.011^{}_{\textcolor{red}{}}$ & $-0.013^{}_{\textcolor{red}{}}$ \\
+NGDS ($n=3$) & $-0.014^{}_{\textcolor{red}{}}$ & $-0.017^{}_{\textcolor{red}{}}$ \\
+\bottomrule
+\end{tabular}
+\caption{
+AI $\times$ incentive interaction effects, defined as
+$(\mathrm{AI\text{-}T}-\mathrm{AI\text{-}O})
+-(\mathrm{SELF\text{-}T}-\mathrm{SELF\text{-}O})$.
+Inference uses jackknife variance estimates for the pairwise-similarity
+U-statistics with a normal approximation and two-sided tests.
+Black significance stars indicate unadjusted p-values, while red stars
+indicate Benjamini--Hochberg FDR-adjusted p-values. BH correction is
+applied separately within each study across metrics:
+$^{*}p<0.1$, $^{**}p<0.05$, $^{***}p<0.01$.
+}
+\label{tab:interaction}
+\end{table}

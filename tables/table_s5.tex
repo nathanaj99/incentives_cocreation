@@ -1,0 +1,32 @@
+\begin{table}[ht]
+\centering
+\small
+\begin{tabular}{lrr|rr|rr}
+\toprule
+Comparison & \multicolumn{2}{c}{\textbf{AI-O - SELF-O}} & \multicolumn{2}{c}{\textbf{AI-T - SELF-T}} & \multicolumn{2}{c}{\textbf{AI-T - AI-O}} \\
+\midrule
+AI Adoption level & Low & High & Low & High & Low & High \\
+\cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7}
+\midrule
+\rowcolor{lightgray}
+\textbf{Embeddings} & & & & & & \\
+all-MiniLM-L12 $\downarrow$ & 0.025 & 0.064*** & 0.059** & 0.065*** & 0.039 & 0.005 \\
+all-mpnet-base $\downarrow$ & 0.023 & 0.065** & 0.050* & 0.099*** & 0.024 & 0.030 \\
+Qwen3-Embedding $\downarrow$ & -0.017 & 0.007 & 0.021 & 0.032** & 0.013 & -0.000 \\
+embeddinggemma $\downarrow$ & 0.015 & 0.048*** & 0.023 & 0.063*** & -0.018 & -0.011 \\
+Style-Embedding $\downarrow$ & -0.119 & 0.061 & 0.059 & 0.260*** & 0.135 & 0.155*** \\
+byt5 $\downarrow$ & 0.004 & 0.005 & 0.018* & 0.015 & -0.001 & -0.004 \\
+STAR $\downarrow$ & 0.004 & 0.118*** & 0.017 & 0.112*** & 0.026 & 0.007 \\
+\midrule
+\rowcolor{lightgray}
+\textbf{Lexical} & & & & & & \\
+Compression ratio $\downarrow$ & -0.063 & -0.103 & -0.085 & -0.114 & -0.020 & -0.009 \\
+BLEU $\downarrow$ & -0.001 & -0.000 & 0.000 & 0.001 & 0.001 & -0.000 \\
+ROUGE-L $\downarrow$ & -0.004 & -0.002 & 0.003 & 0.001 & 0.001 & -0.003 \\
+NGDS ($n=2$) $\uparrow$ & 0.077 & 0.113 & 0.063 & 0.102 & 0.001 & 0.005 \\
+NGDS ($n=3$) $\uparrow$ & 0.084 & 0.123 & 0.066 & 0.109 & -0.000 & 0.005 \\
+\bottomrule
+\end{tabular}
+\caption{Study 1: effect sizes from differences in mean pairwise similarity using jackknife variance estimates for the pairwise-similarity U-statistics with a normal approximation and one-sided tests: $^{*}$ $p<0.1$, $^{**}$ $p<0.05$, $^{***}$ $p<0.01$, over the final submissions stratified by low and high adoption of AI among the AI-assisted group.}
+\label{tab:effects_low_high_study1}
+\end{table}
